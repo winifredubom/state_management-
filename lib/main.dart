@@ -31,8 +31,8 @@ class Contact{
   });
 }
 
-class ContactBook{
-  ContactBook._sharedInstance();
+class ContactBook extends ValueNotifier<List<Contact>>{
+  ContactBook._sharedInstance(): super([]);
   static final ContactBook _shared = ContactBook._sharedInstance();
   factory ContactBook() => _shared;
 
